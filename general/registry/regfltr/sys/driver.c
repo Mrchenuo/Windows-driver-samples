@@ -164,6 +164,8 @@ Return value:
 
     //
     //  Default to NonPagedPoolNx for non paged pool allocations where supported.
+    //  ExInitializeDriverRuntime(DrvRtPoolNxOptIn); 是一个在 Windows 驱动程序初始化时调用的函数，用于设置内核池分配的默认行为。
+    //  DrvRtPoolNxOptIn 是传递给 ExInitializeDriverRuntime 函数的一个参数，它指示驱动程序选择加入非执行（NX）池分配。
     //
 
     ExInitializeDriverRuntime(DrvRtPoolNxOptIn);
